@@ -25,6 +25,10 @@ function flattenArray(arr) {
 let result = flattenArray(multiDimension); // Output: [1, 2, 3, 4, 5, 6]
 console.log(result);
 
+//Solution using flat() method
+let flatMethod = multiDimension.flat(Infinity);
+console.log(flatMethod); // Output: [1, 2, 3, 4, 5, 6]
+
 /*
 Aditional notes:
 -concat is used to merge two or more arrays into a new array.
@@ -33,4 +37,10 @@ Aditional notes:
 -for...of uses the format:
     for (variable of iterable)
     statement
+
+-flat() is a built-in JavaScript method that creates a new array with all sub-array 
+elements concatenated into it recursively up to the specified depth.
+-If we know the exact depth of the nested array, we can specify. If we’re not sure of the 
+depth, we can use Infinity as the argument. This will flatten the array completely regardless
+of how many levels of nesting it has.
 */
